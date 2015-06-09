@@ -5,7 +5,7 @@ NYT.Views.ArticleShow = Backbone.View.extend ({
   tagName: 'li',
 
   initialize: function (options) {
-    this.firstArticle = options.firstArticle;
+    // this.firstArticle = options.firstArticle;
     // this.listenTo(this.model, 'sync', this.render);
   },
 
@@ -26,15 +26,15 @@ NYT.Views.ArticleShow = Backbone.View.extend ({
         hasPromo = true;
         promoCheck = promoCheck.promotional_media;
       } else if (hasPromo) {
-        if (this.firstArticle) {
-          imageUrl = promoCheck.image.image_crops.master495.url;
-          imageCredit = promoCheck.image.credit;
-          break
-        } else {
+        // if (this.firstArticle) {
+        //   imageUrl = promoCheck.image.image_crops.master495.url;
+        //   imageCredit = promoCheck.image.credit;
+        //   break
+        // } else {
           imageUrl = promoCheck.image.image_crops.mediumThreeByTwo210.url;
           imageCredit = promoCheck.image.credit;
           break
-        }
+        // }
       } else {
         break
       }
