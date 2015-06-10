@@ -54,7 +54,7 @@ NYT.Routers.Router = Backbone.Router.extend ({
       fashionArticles.add(article);
     });
 
-    var articlesView = new NYT.Views.ArticlesIndex({ collection: homeArticles });
+    var articlesView = new NYT.Views.FashionIndex({ collection: fashionArticles });
 
     this._swapView(articlesView);
   },

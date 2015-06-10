@@ -9,6 +9,9 @@ window.NYT = {
   },
 }
 
+// Create a callback functions to handle the data in the JSONP objects 
+// returned after the ajax requests are complete.
+
 window.jsonFeedCallback_homepage = function(data) {
   var articles = data.items;
   NYTROUTER.homeShow(articles);
