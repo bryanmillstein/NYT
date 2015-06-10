@@ -5,7 +5,7 @@ NYT.Views.ArticleShow = Backbone.View.extend ({
   tagName: 'li',
 
   initialize: function (options) {
-    // this.firstArticle = options.firstArticle;
+    this.firstArticle = options.firstArticle;
     // this.listenTo(this.model, 'sync', this.render);
   },
 
@@ -17,24 +17,29 @@ NYT.Views.ArticleShow = Backbone.View.extend ({
     // The idea is to continue checking until you've reached the last promotional_media and then
     // setting the value of the imageUrl.
 
+    if (this.firstArticle) {
+      imageUrl = "assets/images/the-new-york-times-logo-large.jpg";
+    } else {
+      imageUrl = "assets/images/the-new-york-times-logo-small.jpg";
+    }
+
     var promoCheck = this.model.attributes,
         hasPromo = false,
-        imageUrl = null,
         imageCredit = null;
     while (true) {
       if (promoCheck.promotional_media) {
         hasPromo = true;
         promoCheck = promoCheck.promotional_media;
       } else if (hasPromo) {
-        // if (this.firstArticle) {
-        //   imageUrl = promoCheck.image.image_crops.master495.url;
-        //   imageCredit = promoCheck.image.credit;
-        //   break
-        // } else {
+        if (this.firstArticle) {
+          imageUrl = promoCheck.image.image_crops.master495.url;
+          imageCredit = promoCheck.image.credit;
+          break
+        } else {
           imageUrl = promoCheck.image.image_crops.mediumThreeByTwo210.url;
           imageCredit = promoCheck.image.credit;
           break
-        // }
+        }
       } else {
         break
       }

@@ -3,7 +3,6 @@ NYT.Views.ArticlesIndex = Backbone.CompositeView.extend({
   tagName: 'section',
 
   initialize: function () {
-    this.firstArticle = true;
     this.render();
   },
 
@@ -20,12 +19,17 @@ NYT.Views.ArticlesIndex = Backbone.CompositeView.extend({
   },
 
   addArticle: function (article) {
-    var articleView = new NYT.Views.ArticleShow({ model: article, firstArticle: this.firstArticle });
+    var firstArticle;
+
+    if (article.cid == "c1") {
+      firstArticle = true;
+    } else {
+      firstArticle = false;
+    }
+
+    var articleView = new NYT.Views.ArticleShow({ model: article, firstArticle: firstArticle });
 
     this.addSubview('.articles', articleView);
-
-    this.firstArticle = false;
-
   }
 
 
