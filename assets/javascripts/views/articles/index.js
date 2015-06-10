@@ -7,6 +7,8 @@ NYT.Views.ArticlesIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
+    $(".main")[0].classList.remove("wide");
+
     var content = this.template;
     this.$el.html(content);
 

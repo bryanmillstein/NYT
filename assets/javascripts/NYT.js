@@ -4,12 +4,12 @@ window.NYT = {
   Views: {},
   Routers: {},
   initialize: function(){
-    NYTROUTER = new NYT.Routers.Router({ $rootEl: $('#main') });
+    NYTROUTER = new NYT.Routers.Router({ $rootEl: $('.main') });
     Backbone.history.start();
   },
 }
 
-// Create a callback functions to handle the data in the JSONP objects 
+// Create a callback functions to handle the data in the JSONP objects
 // returned after the ajax requests are complete.
 
 window.jsonFeedCallback_homepage = function(data) {

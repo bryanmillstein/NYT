@@ -114,12 +114,52 @@ body {
   border: 1px solid #fff;
 }
 
-/* FEED */
-#main {
+/* MAIN CONTENT */
+
+.main {
   width: 695px;
   padding: 0 40px 0 40px;
   margin: 0 auto;
   background: #fff;
+}
+
+body .wide {
+  width: 920px;
+}
+
+
+
+/* ARTICLE INDEX */
+.news-header {
+  padding-top: 5px;
+}
+
+#fashion-link {
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 0px 5px;
+  float: right;
+  margin-top: -45px;
+}
+
+#fashion-link:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: #000;
+}
+
+#news-tag {
+  border: 1px solid #000;
+  padding: 3px;
+  text-align: center;
+  width: 145px;
+  margin-bottom: 10px;
+}
+
+#news-tag:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: #000;
 }
 
 
@@ -185,4 +225,48 @@ figcaption {
   font-size: 14px;
   color: #000;
   font-weight: 300;
+}
+
+/* FASHION INDEX */
+
+.fashion-header {
+  padding-top: 10px;
+}
+
+#news-link {
+  float: right;
+  margin-top: -25px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 0px 5px;
+}
+
+#news-link:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: #000;
+}
+
+#fashion-tag  {
+  font-family: "Goblin One";
+  border-top: 1px solid lightgray;
+  padding: 7px;
+}
+
+.fashion > li {
+  float: left;
+  width: 210px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  min-height: 250px;
+  border-bottom: 1px solid lightgray;
+}
+
+/* FASHION SHOW */
+
+.article-info > hgroup > h1 {
+  font-family: "Goblin One";
+  font-size: 12px;
+  color: #000;
+
 }

@@ -7,6 +7,8 @@ NYT.Views.FashionIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
+    $(".main")[0].classList.add("wide");
+
     var content = this.template;
     this.$el.html(content);
 
