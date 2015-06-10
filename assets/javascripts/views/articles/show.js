@@ -50,12 +50,16 @@ NYT.Views.ArticleShow = Backbone.View.extend ({
         promoCheck = promoCheck.promotional_media;
       } else if (hasPromo) {
         if (this.firstArticle) {
-          this.imageUrl = promoCheck.image.image_crops.master495.url;
-          this.imageCredit = promoCheck.image.credit;
+          if (promoCheck.image.image_crops.master495) {
+            this.imageUrl = promoCheck.image.image_crops.master495.url;
+            this.imageCredit = promoCheck.image.credit;
+          }
           break
         } else {
-          this.imageUrl = promoCheck.image.image_crops.mediumThreeByTwo210.url;
-          this.imageCredit = promoCheck.image.credit;
+          if (promoCheck.image.image_crops.mediumThreeByTwo210) {
+            this.imageUrl = promoCheck.image.image_crops.mediumThreeByTwo210.url;
+            this.imageCredit = promoCheck.image.credit;
+          }
           break
         }
       } else {
