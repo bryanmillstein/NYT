@@ -27,6 +27,14 @@
       </hgroup>
 
     </section>
+
+    <script charset="utf-8">
+      $("#backbone-initialize").click(function(){
+        $("#landing-page")[0].classList.add("hidden");
+        NYT.initialize({});
+      })
+    </script>
+    
     <div id="main">
 
     </div>
@@ -44,13 +52,6 @@
     <script type="application/javascript" src="assets/javascripts/router/router.js"></script>
     <script type="application/javascript" src="assets/javascripts/views/articles/index.js"></script>
     <script type="application/javascript" src="assets/javascripts/views/articles/show.js"></script>
-
-    <script charset="utf-8">
-      $("#backbone-initialize").click(function(){
-        $("#landing-page")[0].classList.add("hidden");
-        NYT.initialize({});
-      })
-    </script>
 
   </body>
 </html>
