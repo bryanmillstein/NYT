@@ -2,9 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-
     <title>NYT APP</title>
     <link rel=icon href="assets/images/the-new-york-times-logo-small.jpg" sizes="16x16">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Goblin+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
 
 
     <link rel="stylesheet" href="css/master.css" charset="utf-8">
@@ -12,9 +14,18 @@
   </head>
 
   <body>
+    <section id="landing-page">
+      <hgroup>
+        <h1>This is the NYT Coding Test</h1>
+        <h2>It was built with Backbone.js and jQuery by <a href="https://www.linkedin.com/in/bryanmillstein" id="linked-in" target="_blank">Bryan Millstein</a></h2>
+        <h3>See the code
+          <a href="https://github.com/bryanmillstein/NYT" target="_blank" class="icon alt fa-github"><img src="assets/images/gitHub-logo.png" alt="" /></a>
+        </h3>
+        <button id="backbone-initialize">Start the Backbone App</button>
+        
+      </hgroup>
 
-
-    <button id="backbone-initialize">Start the Backbone App</button>
+    </section>
     <div id="main">
 
     </div>
@@ -34,12 +45,8 @@
     <script type="application/javascript" src="assets/javascripts/views/articles/show.js"></script>
 
     <script charset="utf-8">
-      // $(window).load(function(){
-      //   NYT.initialize({});
-      // });
-
       $("#backbone-initialize").click(function(){
-        $("#backbone-initialize")[0].classList.add("hidden");
+        $("#landing-page")[0].classList.add("hidden");
         NYT.initialize({});
       })
     </script>
