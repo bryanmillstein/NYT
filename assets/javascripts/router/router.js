@@ -4,7 +4,8 @@ NYT.Routers.Router = Backbone.Router.extend ({
   },
 
   routes: {
-    "": 'homeRequest'
+    "": 'homeRequest',
+    "fashion": "fashionRequest"
   },
 
   homeRequest: function (){
@@ -31,6 +32,26 @@ NYT.Routers.Router = Backbone.Router.extend ({
 
     articles.forEach(function (article){
       homeArticles.add(article);
+    });
+
+    var articlesView = new NYT.Views.ArticlesIndex({ collection: homeArticles });
+
+    this._swapView(articlesView);
+  },
+
+  fashionRequest: function (){
+    $.ajax({
+      url: "http://static01.nyt.com/services/json/sectionfronts/fashion/index.jsonp",
+      dataType: "jsonp"
+
+    });
+  },
+
+  fashionShow: function (articles) {
+    var fashionArticles = new NYT.Collections.Articles();
+
+    articles.forEach(function (article){
+      fashionArticles.add(article);
     });
 
     var articlesView = new NYT.Views.ArticlesIndex({ collection: homeArticles });

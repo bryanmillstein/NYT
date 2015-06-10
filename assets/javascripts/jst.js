@@ -1,7 +1,7 @@
 NYT.JST = {};
 
 NYT.JST['articles/index'] = _.template(
-  "<ul class='articles group'></ul>"
+  "<a href='#action'>Action</a><ul class='articles group'></ul>"
 );
 
 NYT.JST['articles/show'] = _.template(
