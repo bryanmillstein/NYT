@@ -5,6 +5,6 @@ NYT.JST['articles/index'] = _.template(
 );
 
 NYT.JST['articles/show'] = _.template(
-  "<article class='article-info'><img src='<%= imageUrl %>'/><figcaption><%= imageCredit %></figcaption><h1 class='article-title'><%= title %></h1><h5 class='article-description'><%= description %></h5></article>"
+  "<article class='article-info'><figure><a href='<%= link %>' target='_blank'><img src='<%= imageUrl %>'/></a><figcaption><%= imageCredit %></figcaption></figure><hgroup><a href='<%= link %>' target='_blank'><h1 class='article-title'><%= title %></h1></a><h5 class='article-description'><%= description %></h5></hgroup></article>"
 
 );
