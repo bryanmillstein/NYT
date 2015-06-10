@@ -49,10 +49,14 @@ NYT.Views.FashionShow = Backbone.View.extend ({
         promoCheck = promoCheck.promotional_media;
       } else if (hasPromo) {
         if (this.firstArticle) {
-          this.imageUrl = promoCheck.image.image_crops.master495.url;
+          if (promoCheck.image.image_crops.master495) {
+            this.imageUrl = promoCheck.image.image_crops.master495.url;
+          }
           break
         } else {
-          this.imageUrl = promoCheck.image.image_crops.mediumThreeByTwo210.url;
+          if (promoCheck.image.image_crops.mediumThreeByTwo210) {
+            this.imageUrl = promoCheck.image.image_crops.mediumThreeByTwo210.url;
+          }
           break
         }
       } else {
