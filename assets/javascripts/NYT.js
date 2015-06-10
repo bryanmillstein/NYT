@@ -1,3 +1,6 @@
+// These creates the NYT global namespace which will
+// hold all the properties of the application.
+
 window.NYT = {
   Models: {},
   Collections: {},
@@ -14,7 +17,7 @@ window.NYT = {
 
 window.jsonFeedCallback_homepage = function(data) {
   var articles = data.items;
-  NYTROUTER.homeShow(articles);
+  NYTROUTER.newsShow(articles);
 
 }
 

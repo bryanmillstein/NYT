@@ -106,6 +106,8 @@ body {
 #backbone-initialize {
   font-family: "Lobster";
   margin: 0px 240px;
+  border: 1px solid #000;
+
 }
 
 #backbone-initialize:hover {

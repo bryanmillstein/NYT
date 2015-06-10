@@ -4,11 +4,11 @@ NYT.Routers.Router = Backbone.Router.extend ({
   },
 
   routes: {
-    "news": 'homeRequest',
+    "news": 'newsRequest',
     "fashion": "fashionRequest"
   },
 
-  homeRequest: function (){
+  newsRequest: function (){
     // Make a custom ajax request using JSONP to overcome
     // same origin policy.
 
@@ -19,22 +19,22 @@ NYT.Routers.Router = Backbone.Router.extend ({
     });
 
     // The above ajax request is wrapped in a call back function that will
-    // call the homeShow function passing in the returned data.
+    // call the newsShow function passing in the returned data.
 
   },
 
-  homeShow: function (articles) {
-    var homeArticles = new NYT.Collections.Articles();
+  newsShow: function (articles) {
+    var newsArticles = new NYT.Collections.Articles();
 
     // Add each article to the empty collection of articles.
     // This will create a model for each article preserving its original
     // attributes from the JSON object.
 
     articles.forEach(function (article){
-      homeArticles.add(article);
+      newsArticles.add(article);
     });
 
-    var articlesView = new NYT.Views.ArticlesIndex({ collection: homeArticles });
+    var articlesView = new NYT.Views.ArticlesIndex({ collection: newsArticles });
 
     this._swapView(articlesView);
   },
@@ -45,10 +45,17 @@ NYT.Routers.Router = Backbone.Router.extend ({
       dataType: "jsonp"
 
     });
+
+    // The above ajax request is wrapped in a call back function that will
+    // call the fashionShow function passing in the returned data.
   },
 
   fashionShow: function (articles) {
     var fashionArticles = new NYT.Collections.Articles();
+
+    // Add each article to the empty collection of articles.
+    // This will create a model for each article preserving its original
+    // attributes from the JSON object.
 
     articles.forEach(function (article){
       fashionArticles.add(article);

@@ -1,4 +1,13 @@
 NYT.Views.ArticlesIndex = Backbone.CompositeView.extend({
+  // Note that this view is a composite view and we are not simply appending
+  // articles to the DOM. We are in fact creating a new separate view for
+  // each article and then adding that view in here as a sub view. This allows
+  // us to manipulate each sub view independently of the others and without having
+  // to re render the entire index. This comes in handy for things like 'liking' an
+  // article or making a comment. With sub views, these client interactions can be
+  // accounted for and the corresponding view updated without having to render the
+  // index again.
+
   template: NYT.JST["articles/index"],
   tagName: 'section',
 
@@ -21,6 +30,10 @@ NYT.Views.ArticlesIndex = Backbone.CompositeView.extend({
   },
 
   addArticle: function (article) {
+    // The first article business below keeps track of which article will
+    // be first in the feed so we can capture and render the appropriate sized
+    // version of the image.
+
     var firstArticle;
 
 
