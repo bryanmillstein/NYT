@@ -88,13 +88,19 @@ body {
 
 }
 
-#landing-page #linked-in:hover {
-  color: #fff;
-}
-
 #landing-page > hgroup > h3 {
   font-family: "Lobster";
   text-align: center;
+}
+
+#landing-page > hgroup > h4 {
+  font-family: "Lobster";
+  text-align: center;
+  font-size: 14px;
+}
+
+#landing-page #linked-in:hover {
+  color: #fff;
 }
 
 #backbone-initialize {
