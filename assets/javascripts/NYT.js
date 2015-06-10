@@ -14,3 +14,9 @@ window.jsonFeedCallback_homepage = function(data) {
   NYTROUTER.homeShow(articles);
 
 }
+
+window.jsonFeedCallback_fashion = function(data) {
+  var articles = data.items;
+  NYTROUTER.fashionShow(articles);
+
+}
