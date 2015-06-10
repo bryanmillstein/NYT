@@ -25,6 +25,13 @@ ul {
   list-style: none;
 }
 
+button {
+  border-radius: 5px;
+  background: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 /*img {
   display: block;
   width: 100%;
@@ -52,7 +59,25 @@ body {
   background: lightgray;
 }
 
+.hidden {
+  display: none;
+}
+
 /* HOME PAGE */
+
+#backbone-initialize {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+#backbone-initialize:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* FEED */
 #main {
   width: 695px;
   padding: 0 40px 0 40px;
@@ -103,10 +128,14 @@ figcaption {
   font-size: 12px;
   color: lightgray;
   text-transform: uppercase;
+  text-align: right;
+}
+
+.article-info > hgroup {
+  margin-top: 20px;
 }
 
 .article-info > hgroup > a > h1 {
-  margin-top: 10px;
   font-size: 24px;
   color: #000;
   font-weight: 900;
