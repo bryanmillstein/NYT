@@ -23,7 +23,8 @@ NYT.Views.ArticlesIndex = Backbone.CompositeView.extend({
   addArticle: function (article) {
     var firstArticle;
 
-    if (article.cid == "c1") {
+
+    if (article.cid == this.collection.models[0].cid) {
       firstArticle = true;
     } else {
       firstArticle = false;

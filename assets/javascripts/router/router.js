@@ -4,7 +4,7 @@ NYT.Routers.Router = Backbone.Router.extend ({
   },
 
   routes: {
-    "": 'homeRequest',
+    "news": 'homeRequest',
     "fashion": "fashionRequest"
   },
 
