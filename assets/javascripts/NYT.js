@@ -6,6 +6,7 @@ window.NYT = {
   Collections: {},
   Views: {},
   Routers: {},
+  JST: {},
   initialize: function(){
     NYTROUTER = new NYT.Routers.Router({ $rootEl: $('.main') });
     Backbone.history.start();
