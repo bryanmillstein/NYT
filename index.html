@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NYT APP</title>
+    <link rel=icon href="assets/images/the-new-york-times-logo-small.jpg" sizes="16x16">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Goblin+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="css/master.css" charset="utf-8">
+
+  </head>
+
+  <body>
+    <section id="landing-page">
+      <hgroup>
+        <h1 style="box-shadow: 10px 10px 5px #888888; border-radius=0.1px;">This is the NYT Coding Test</h1>
+        <h2>It was built with Backbone.js, jQuery & Semantic HTML5 by <a href="https://www.linkedin.com/in/bryanmillstein" id="linked-in" target="_blank">Bryan Millstein</a></h2>
+        <h3>See the code
+          <a href="https://github.com/bryanmillstein/NYT" target="_blank" class="icon alt fa-github"><img src="assets/images/gitHub-logo.png" alt="" /></a>
+        </h3>
+        <a href="#/news"><button id="backbone-initialize">Start the Backbone App</button></a>
+        <h4>*Articles without associated images receive the default NYT logo.</h4>
+
+      </hgroup>
+
+    </section>
+
+    <div class="main wide">
+    </div>
+
+    <script src="resources/jquery-2.1.1.js"></script>
+    <script src="resources/underscore-min.js"></script>
+    <script src="resources/backbone-min.js"></script>
+
+
+    <script type="application/javascript" src="assets/javascripts/utils/composite_view.js"></script>
+
+    <script type="application/javascript" src="assets/javascripts/NYT.js"></script>
+    <script type="application/javascript" src="assets/javascripts/jst.js"></script>
+    <script type="application/javascript" src="assets/javascripts/models/article.js"></script>
+    <script type="application/javascript" src="assets/javascripts/collections/articles.js"></script>
+    <script type="application/javascript" src="assets/javascripts/router/router.js"></script>
+    <script type="application/javascript" src="assets/templates/articles/index.js"></script>
+    <script type="application/javascript" src="assets/templates/articles/show.js"></script>
+    <script type="application/javascript" src="assets/templates/fashion/index.js"></script>
+    <script type="application/javascript" src="assets/templates/fashion/show.js"></script>
+    <script type="application/javascript" src="assets/javascripts/views/articles/index.js"></script>
+    <script type="application/javascript" src="assets/javascripts/views/articles/show.js"></script>
+    <script type="application/javascript" src="assets/javascripts/views/fashion/index.js"></script>
+    <script type="application/javascript" src="assets/javascripts/views/fashion/show.js"></script>
+
+
+    <script charset="utf-8">
+      $("#backbone-initialize").click(function(){
+        $("#landing-page")[0].classList.add("hidden");
+        NYT.initialize({});
+      })
+    </script>
+
+  </body>
+</html>

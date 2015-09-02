@@ -1,0 +1,274 @@
+/* RESET */
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+figure {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border-radius: 5px;
+  background: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/*img {
+  display: block;
+  width: 100%;
+  height: auto;
+}*/
+
+input,
+button,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* CLEARFIX */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* STYLING */
+
+body {
+  background: #d3d3d3;
+}
+
+.hidden {
+  display: none;
+}
+
+/* HOME PAGE */
+
+#landing-page {
+  position: relative;
+}
+
+#landing-page > hgroup {
+  width: 655px;
+  height: 200px;
+  margin: 10% auto 0;
+}
+
+#landing-page > hgroup > h1 {
+  font-family: "Lobster";
+  font-size: 60px;
+}
+
+#landing-page > hgroup > h2 {
+  font-family: "Lobster";
+  text-align: center;
+  margin: 15px 0;
+  font-size: 20px;
+
+}
+
+#landing-page > hgroup > h3 {
+  font-family: "Lobster";
+  text-align: center;
+}
+
+#landing-page > hgroup > h4 {
+  font-family: "Lobster";
+  text-align: center;
+  font-size: 14px;
+}
+
+#landing-page #linked-in:hover {
+  color: #fff;
+}
+
+#backbone-initialize {
+  font-family: "Lobster";
+  margin: 0px 240px;
+  border: 1px solid #000;
+
+}
+
+#backbone-initialize:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* MAIN CONTENT */
+
+.main {
+  width: 695px;
+  padding: 0 40px 0 40px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+body .wide {
+  width: 920px;
+}
+
+
+
+/* ARTICLE INDEX */
+.news-header {
+  padding-top: 5px;
+}
+
+#fashion-link {
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 0px 5px;
+  float: right;
+  margin-top: -45px;
+}
+
+#fashion-link:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: #000;
+}
+
+#news-tag {
+  border: 1px solid #000;
+  padding: 3px;
+  text-align: center;
+  width: 145px;
+  margin-bottom: 10px;
+}
+
+#news-tag:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: #000;
+}
+
+
+/* ARTICLE SHOW */
+
+.articles > li:first-child {
+  background: transparent;
+  width: 695px;
+  margin: 20px 0;
+  padding: 0;
+  min-height: 0;
+}
+
+.articles > li:first-child > article > figure {
+  float: right;
+}
+
+.articles > li:first-child > article > hgroup {
+  float: left;
+  width: 185px;
+  margin-top: 10%;
+}
+
+.articles > li {
+  float: left;
+  width: 210px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  min-height: 500px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.articles > li:nth-child(3n+3) {
+  border-right: 1px solid #d3d3d3;
+  padding: 0 10px;
+}
+
+.articles > li:nth-child(3n+2) {
+  border-right: 1px solid #d3d3d3;
+}
+
+figcaption {
+  font-size: 12px;
+  color: #d3d3d3;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.article-info > hgroup {
+  margin-top: 20px;
+}
+
+.article-info > hgroup > a > h1 {
+  font-family: "Goblin One";
+  font-size: 12px;
+  color: #000;
+
+}
+
+.article-info > hgroup > h5 {
+  font-family: "Glegoo";
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 300;
+}
+
+/* FASHION INDEX */
+
+.fashion-header {
+  padding-top: 10px;
+}
+
+#news-link {
+  float: right;
+  margin-top: -25px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 0px 5px;
+}
+
+#news-link:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: #000;
+}
+
+#fashion-tag  {
+  font-family: "Goblin One";
+  border-top: 1px solid #d3d3d3;
+  padding: 7px;
+}
+
+.fashion > li {
+  float: left;
+  width: 210px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  min-height: 280px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+/* FASHION SHOW */
+
+.article-info > hgroup > h1 {
+  font-family: "Goblin One";
+  font-size: 12px;
+  color: #000;
+
+}
