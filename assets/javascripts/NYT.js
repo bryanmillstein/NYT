@@ -19,11 +19,9 @@ window.NYT = {
 window.jsonFeedCallback_homepage = function(data) {
   var articles = data.items;
   NYTROUTER.newsShow(articles);
-
 }
 
 window.jsonFeedCallback_fashion = function(data) {
   var articles = data.items;
   NYTROUTER.fashionShow(articles);
-
 }
