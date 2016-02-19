@@ -15,12 +15,10 @@ NYT.Routers.Router = Backbone.Router.extend ({
     $.ajax({
       url: "http://static01.nyt.com/services/json/sectionfronts/index.jsonp",
       dataType: "jsonp"
-
     });
 
     // The above ajax request is wrapped in a call back function that will
     // call the newsShow function passing in the returned data.
-
   },
 
   newsShow: function (articles) {
@@ -43,7 +41,6 @@ NYT.Routers.Router = Backbone.Router.extend ({
     $.ajax({
       url: "http://static01.nyt.com/services/json/sectionfronts/fashion/index.jsonp",
       dataType: "jsonp"
-
     });
 
     // The above ajax request is wrapped in a call back function that will
@@ -68,9 +65,9 @@ NYT.Routers.Router = Backbone.Router.extend ({
 
 
   _swapView: function (view) {
-  this._currentView && this._currentView.remove();
-  this._currentView = view;
-  this.$rootEl.html(view.render().$el);
-}
+    this._currentView && this._currentView.remove();
+    this._currentView = view;
+    this.$rootEl.html(view.render().$el);
+  }
 
 });
